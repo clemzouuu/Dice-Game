@@ -43,14 +43,9 @@ def rethrow ():
         # You have the chose which dice you want to throw. If all the values are not identical, you have to chose or a second time
         else : 
             print("Which dice do you want to throw again ? 1, 2 or 3 ?")
-            rethrow_dice = input()
-        
-        # If you enter a str, the game will ask you to enter an INT
-            if isinstance(rethrow_dice,str):
-                print("Please, enter 1, 2 or 3.")
-                rethrow_dice = int(input())
+            rethrow_dice = int(input())
 
-            while rethrow_dice < 0 and rethrow_dice > 3:
+            while rethrow_dice < 0 or rethrow_dice > 3:
                 print("Please enter 1, 2 or 3")
                 rethrow_dice = int(input())
 
@@ -92,11 +87,6 @@ def second_rethrow ():
         else :
             print('\n',"Which dice do you want to throw again ? 1, 2 or 3 ?")
             rethrow_dice = int(input())
-
-
-            if isinstance(rethrow_dice,str):
-                print("Please, enter 1, 2 or 3.")
-                rethrow_dice = int(input())
 
             
             while rethrow_dice < 0 and rethrow_dice > 3:
